@@ -1,0 +1,22 @@
+# REPORT — inc19 Path-B probe
+
+**Node-count verdict:** naive AND-OR, even reply-reduced (touching+pass) and
+relevant-move restricted, does not finish k=4: >4×10⁶ nodes / 257 s Python,
+incomplete. Per-OR-level growth ×134 ⇒ reduced k=16 ≈ 10¹⁷–10¹⁸ nodes —
+centuries even compiled at 10⁷ nodes/s. SCOPE's 10⁶–10⁸/position hinges
+entirely on reproducing gotrevor-grade λ-search compression (unmeasured here;
+their search repo is not public).
+
+**GO/NO-GO: NO-GO** for Path B as scoped (+7–14 d).
+
+**One-line reason:** the frontier positions are far from any win — zero
+placements finishable within 2 claims and the stored proof decays h=17→8 in 9
+plies with no slack — so the h=16 re-proof is a full deep search whose only
+viable engine is an unproven λ-compression; needs a compiled λ-prover plus a
+k=6/k=8 calibration run before any depth-16 commitment, i.e. outreach-only
+(Path A) stays the deterministic path.
+
+**Details:** /tmp/snaky/inc19/probe/PROBE_REPORT.md
+Artifacts: positions.json (absolute-coordinate frontier positions),
+size_search.py, size_truncations.py, encode_sat.py (CaDiCaL, cross-validated),
+stored_shape.py.
