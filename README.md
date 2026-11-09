@@ -29,3 +29,19 @@ Toolchain `leanprover/lean4:v4.34.1`; Mathlib
 `profiles/lake-manifest.json` in the verifier repo at the statement commit).
 
 Build locally: `lake update && lake exe cache get && lake build Submission`.
+
+---
+
+## Why this repo is up
+
+Reproducible verified bounds: the snaky Bound-20 filing package keeps the board's first Lean Verified row independently rebuildable against byte-exact pins.
+
+[BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for contributions toward [Big O Speedrun](https://bigospeedrun.com) — a companion, never the project. Org story: [profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
+
+## What work can be done here
+
+Bound 20 is filed and verified. Open work: independent rebuilds against the byte-exact pins; Bound-21+ exploration (Bound-19 lives in snaky-nineteen).
+
+## License
+
+Licensed under Apache-2.0 — see [LICENSE](LICENSE)., with vendored portions named in [NOTICE](NOTICE.md) keeping their upstream licenses
