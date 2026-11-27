@@ -4,7 +4,7 @@ Filing package for the Big O Speedrun Snaky challenge (bigospeedrun/verifier,
 issue #106): Maker forces a Snaky within 20 own claims against every legal
 Breaker sequence — full `Bound 20` (win + exact card counts + disjointness).
 
-## Layout (maintainer contract, 2026-11-02 18:53Z)
+## Layout
 
 The ONLY source root is `Submission/`:
 
@@ -30,15 +30,10 @@ Toolchain `leanprover/lean4:v4.34.1`; Mathlib
 
 Build locally: `lake update && lake exe cache get && lake build Submission`.
 
-## Folded staging sibling — `conditional/`
+## Reusable technique library — `conditional/`
 
-`conditional/` is the former `snaky-conditional` repo (source commit
-`6bc844850b43fbbc92a0a21ba84531d015634b79`), merged with full history. It was the
-same-result Bound-20 *staging* tree — `Race.bound` from `Snaky.race_bound_20` against a
-vendored statement, meant to be swapped byte-for-byte for the maintainer's posted
-statement on filing day. That purpose is consumed: Bound-20 was filed from this repo's
-root `Submission/` against the byte-exact `SnakyStatement.lean`. It is kept for its
-reusable technique, not as a second submission:
+`conditional/` (source: `snaky-conditional@6bc844850b43fbbc92a0a21ba84531d015634b79`)
+holds the Bound-20 staging technique, reusable independently of the filing:
 
 - `Submission/SnakyConditional.lean` — Prototype→Conditional **def-bridge** (namespace
   transport lemmas `playState_eq` / `makerAt_eq` / `legal_eq` / `hasSnaky_eq`).
@@ -54,12 +49,6 @@ Build/audit from its own directory: `cd conditional && lake build Submission.Sna
 
 ---
 
-## Why this repo is up
-
-Reproducible verified bounds: the snaky Bound-20 filing package keeps the board's first Lean Verified row independently rebuildable against byte-exact pins.
-
-[BigO-Hunter](https://github.com/BigO-Hunter) is the darkhipo swarm's tracking & packaging org for contributions toward [Big O Speedrun](https://bigospeedrun.com) — a companion, never the project. Org story: [profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io).
-
 ## What work can be done here
 
 Bound 20 is filed and verified. Open work: independent rebuilds against the byte-exact pins; Bound-21+ exploration (Bound-19 lives in snaky-nineteen).
@@ -67,3 +56,7 @@ Bound 20 is filed and verified. Open work: independent rebuilds against the byte
 ## License
 
 Licensed under the Copy-Free/Stays-Free (CFSF) License — see [LICENSE](LICENSE) ([github.com/darkhipo/cfsf](https://github.com/darkhipo/cfsf)). Vendored third-party material keeps its upstream license — see [NOTICE](NOTICE.md).
+
+---
+
+[BigO-Hunter](https://github.com/BigO-Hunter) — tracking & packaging org for [Big O Speedrun](https://bigospeedrun.com) contributions · [org profile](https://github.com/BigO-Hunter/.github) · [bigo-hunter.github.io](https://bigo-hunter.github.io)
