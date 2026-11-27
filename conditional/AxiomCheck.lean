@@ -1,4 +1,4 @@
--- Independent replay (R2125608282): axiom audit + bare-import dry-run of the completed
+-- Independent replay: axiom audit + bare-import dry-run of the completed
 -- SnakyConditional target.  Run: lake env lean -DautoImplicit=false AxiomCheck.lean
 -- This file imports the solution module and prints axioms with NO `open` — a bare-import
 -- audit that proves the entry needs no namespace opens and only the 3 standard axioms.

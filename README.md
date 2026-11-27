@@ -30,6 +30,28 @@ Toolchain `leanprover/lean4:v4.34.1`; Mathlib
 
 Build locally: `lake update && lake exe cache get && lake build Submission`.
 
+## Folded staging sibling — `conditional/`
+
+`conditional/` is the former `snaky-conditional` repo (source commit
+`6bc844850b43fbbc92a0a21ba84531d015634b79`), merged with full history. It was the
+same-result Bound-20 *staging* tree — `Race.bound` from `Snaky.race_bound_20` against a
+vendored statement, meant to be swapped byte-for-byte for the maintainer's posted
+statement on filing day. That purpose is consumed: Bound-20 was filed from this repo's
+root `Submission/` against the byte-exact `SnakyStatement.lean`. It is kept for its
+reusable technique, not as a second submission:
+
+- `Submission/SnakyConditional.lean` — Prototype→Conditional **def-bridge** (namespace
+  transport lemmas `playState_eq` / `makerAt_eq` / `legal_eq` / `hasSnaky_eq`).
+- `Submission/Padding.lean` — **Bound-35 transport**: pads the verified Bound-20 win to
+  horizon 35 (`Snaky.race_bound_35`) via the r-genericity counter shift.
+- `verify.sh` + `AxiomCheck.lean` — **6-check harness** (build green, zero sorry, axioms
+  exactly 3, `-DautoImplicit=false`, statement byte-exact sha256, bare-import audit).
+- `target/` — corpus target statement + sha256 witness; `.gitattributes` (`* -text`)
+  pins line endings byte-exact.
+
+Build/audit from its own directory: `cd conditional && lake build Submission.SnakyConditional`
+(same v4.34.1 / Mathlib d13f23b7 pins).
+
 ---
 
 ## Why this repo is up

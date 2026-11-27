@@ -1,7 +1,7 @@
 import Submission.PlaneBound
 
 /-!
-# Padding: extend the verified Bound-20 win to horizon 35 (R2125608282)
+# Padding: extend the verified Bound-20 win to horizon 35
 
 The corpus target `SnakyConditional` is `BigOSpeedrun.Snaky.Bound 35` — the *weakest*
 horizon of the statement we already won at Bound 20 (issue #114, `Snaky.race_bound_20`,

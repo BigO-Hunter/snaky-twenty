@@ -1,5 +1,5 @@
 #!/bin/bash
-# Immunization 6-check for R2125608282 (heilbronn RUNBOOK pattern + corpus byte-exactness):
+# 6-check verification harness (corpus byte-exactness + axiom audit):
 #  1. lake build green            2. zero sorry
 #  3. axioms exactly 3            4. -DautoImplicit=false clean
 #  5. statement byte-exact vs corpus target (sha256)

@@ -42,7 +42,7 @@ end OrdinaryStrategy
 
 open OrdinaryStrategy
 
-/- BRIDGE (R2125608282): the corpus defs above are letter-for-letter identical to the
+/- BRIDGE: the corpus defs above are letter-for-letter identical to the
    vendored `OAI.SnakyPrototype` defs that the verified Bound-20 proof tree
    (`Submission/`, from darkhipo/snaky-twenty) is stated against — only the namespace
    differs.  These lemmas transport that tree's `BigOSpeedrun.Snaky.Bound 35` result into
